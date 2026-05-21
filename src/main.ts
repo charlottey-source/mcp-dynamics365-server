@@ -178,7 +178,7 @@ export class Dynamics365 {
    * @returns Promise resolving to the list of accounts
    */
   public async getAccounts(): Promise<any> {
-    return this.makeApiRequest("api/data/v9.2/accounts", "GET");
+    return this.makeApiRequest("api/data/v9.2/accounts?$top=50&$select=name,accountid,emailaddress1,telephone1", "GET");
   }
 
   /**
